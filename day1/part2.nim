@@ -41,5 +41,3 @@ for i in 0..(len(lines) - 1):
     total += comb
 
 echo total
-
-x
