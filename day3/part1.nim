@@ -48,4 +48,3 @@ proc sum_engine_schematic_parts(schematic: var string): int =
 
 var fileData = readFile paramStr 1
 echo sum_engine_schematic_parts fileData
-
