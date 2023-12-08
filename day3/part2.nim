@@ -74,4 +74,3 @@ proc sum_engine_schematic_gears(schematic: var Schematic): int =
 var fileData = readFile paramStr 1
 var schematic = create_schematic fileData
 echo schematic.sum_engine_schematic_gears()
-

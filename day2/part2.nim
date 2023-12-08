@@ -31,4 +31,3 @@ for game in games:
     totalPower += limits[0] * limits[1] * limits[2]
 
 echo totalPower
-

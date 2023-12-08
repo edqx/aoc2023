@@ -89,4 +89,3 @@ while i < len seeds:
     i += 2
 
 echo lowest_location
-

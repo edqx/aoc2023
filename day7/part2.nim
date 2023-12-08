@@ -59,17 +59,14 @@ proc sortCardsOfUniformKind(deckKindBids: var seq[DeckKindBid]): void =
                 done = false
         if done: break
 
-echo getKind "T72JJ"
-echo getKind "T77TJ"
+var fileData = readFile paramStr 1
+var lines = fileData.split '\n'
+var deckKindBids = lines.map proc(cardBidStr: string): DeckKindBid = (cardBidStr[0..4], getKind cardBidStr[0..4], parseInt cardBidStr[6..<len cardBidStr])
+sortCardsOfUniformKind deckKindBids
 
-# var fileData = readFile paramStr 1
-# var lines = fileData.split '\n'
-# var deckKindBids = lines.map proc(cardBidStr: string): DeckKindBid = (cardBidStr[0..4], getKind cardBidStr[0..4], parseInt cardBidStr[6..<len cardBidStr])
-# sortCardsOfUniformKind deckKindBids
+var total = 0
+for rankI, deckKindBid in deckKindBids:
+    var rank = deckKindBids.len - rankI
+    total += rank * deckKindBid.bid
 
-# var total = 0
-# for rankI, deckKindBid in deckKindBids:
-#     var rank = deckKindBids.len - rankI
-#     total += rank * deckKindBid.bid
-
-# echo deckKindBids.map(proc(x: DeckKindBid): string = x.deck).join(" > "), "\n", total
+echo deckKindBids.map(proc(x: DeckKindBid): string = x.deck).join(" > "), "\n", total

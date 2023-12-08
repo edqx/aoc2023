@@ -27,7 +27,3 @@ for game in games:
     gameIdTotal += game.parse_as_game limits
 
 echo gameIdTotal
-
-
-
-

@@ -15,4 +15,3 @@ for i, time in times:
     total *= (int)(ceil(x2) - ceil(x1))
 
 echo total
-

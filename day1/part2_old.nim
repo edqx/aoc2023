@@ -49,4 +49,3 @@ for i, line in lines:
     total += val
 
 echo total
-
