@@ -10,5 +10,3 @@ proc generateRegression(numbers: seq[int]): int =
 var fileData = readFile paramStr 1
 var lines = fileData.split '\n'
 echo lines.foldl(a + generateRegression b.splitWhitespace.map parseInt, 0)
-
-
