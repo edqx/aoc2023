@@ -61,3 +61,5 @@ for (a, b) in pairs:
         if j in universeExpansions[1]: dj += 1000000 - 1
     var dist = di + dj
     totalDistance += dist
+
+echo totalDistance
