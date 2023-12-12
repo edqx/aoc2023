@@ -77,4 +77,3 @@ var total = 0
 for record in lines:
     total += countNumArrangements record
 echo total
-
