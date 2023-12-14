@@ -1,7 +1,8 @@
 import std/[os, strutils, tables]
 
-type Direction = enum North, East, South, West
-type Platform = tuple[str: string, width, height: int]
+type
+    Direction = enum North, East, South, West
+    Platform = tuple[str: string, width, height: int]
 
 proc rollRockOnce(platform: var Platform, ai: var int, bi: int): bool =
     if platform.str[bi] == '#' or platform.str[bi] == 'O': return false
